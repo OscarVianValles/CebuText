@@ -2588,3 +2588,13 @@ void Map::changeTime(int newTime) {
     _currGraph = &_graphEvening;
   }
 }
+
+void Map::addLandmark(std::string name) {
+  _graphMorning.addVertex(name);
+  _graphEvening.addVertex(name);
+}
+void Map::addRoad(int source, int destination, int morningCost,
+                  int eveningCost) {
+  _graphMorning.addEdge(source, destination, morningCost);
+  _graphEvening.addEdge(source, destination, eveningCost);
+}

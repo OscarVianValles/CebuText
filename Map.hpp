@@ -14,6 +14,8 @@ public:
   Map();
   void displayChoices();
   void changeTime(int);
+  void addLandmark(std::string);
+  void addRoad(int, int, int, int);
   std::stack<std::string> getPath(int, int);
 };
 
